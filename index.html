@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teki | Gamify Your Productivity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-gold: #fbbf24;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --gradient-logo: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; }
+        .hero-text p { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 2rem; }
+
+        .hero-image { flex: 1; text-align: right; }
+        .app-screenshot {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            border: 4px solid #334155;
+            transition: transform 0.3s ease;
+        }
+
+        .app-screenshot:hover {
+            transform: scale(1.2);
+        }
+
+        .play-button {
+            display: inline-block;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+
+        .play-button img {
+            height: 60px;
+            display: block;
+        }
+
+        /* Feature Sections */
+        .feature-row {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .feature-row.reverse { flex-direction: row-reverse; }
+        .feature-content { flex: 1; }
+        .feature-image { flex: 1; text-align: center; }
+        
+        .feature-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-gold); }
+        .feature-content p { font-size: 1.1rem; color: var(--text-dim); }
+
+        /* FAQ Section */
+        .faq-section { padding: 80px 0; }
+        .faq-section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+        
+        details {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after { content: '+'; color: var(--accent-gold); font-size: 1.5rem; }
+        details[open] summary::after { content: '-'; }
+        .faq-content { padding: 0 20px 20px; color: var(--text-dim); }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            padding: 60px 0;
+            margin-top: 80px;
+            border-top: 1px solid #1e293b;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-col h4 { margin-bottom: 20px; color: var(--text-dim); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-main); text-decoration: none; margin-bottom: 10px; opacity: 0.8; }
+        .footer-col a:hover { opacity: 1; color: var(--accent-gold); }
+
+        @media (max-width: 768px) {
+            header, .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-image { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="hero-text">
+            <h1>Turn your life into a video game.</h1>
+            <p>Teki is a Gen Z productivity app that applies video game mechanics to what really matters: leveling up <b>YOUR</b> life.</p>
+            <a href="YOUR_PLAY_STORE_LINK_HERE" class="play-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+</a>
+        </div>
+        <div class="hero-image">
+            <img src="screenshot_teki_home.jpeg" alt="Teki Home Screen" class="app-screenshot">
+        </div>
+    </header>
+
+    <section class="feature-row reverse">
+        <div class="feature-content">
+            <h2>Built by ADHDers <br>– for ADHDers.</h2>
+            <p>Instant, measurable rewards. For every habit! Break goals into as <b>small</b> of tasks as you'd like – dreams are built 'brick by brick', after all.</p>
+        </div>
+        <div class="feature-image">
+            <img src="screenshot_teki_tasks.jpg" alt="Teki Tasks" class="app-screenshot">
+        </div>
+    </section>
+
+    <section class="feature-row">
+        <div class="feature-content">
+            <h2>Rewards that work.</h2>
+            <p>Your balance is yours to use! Whether it's Labubus or a Netflix binge you desire, Teki allows you to set rewards that <b>motivate YOU</b>.</p>
+        </div>
+        <div class="feature-image">
+            <img src="screenshot_teki_rewards.jpeg" alt="Teki Rewards" class="app-screenshot">
+        </div>
+    </section>
+
+    <section class="feature-row reverse">
+        <div class="feature-content">
+            <h2>Track what matters.</h2>
+            <p>Completed 10 easy chores yesterday and 3 'nightmare mode' tasks today? No problem – our chart tracks the <b>total coin value</b> of the tasks you finish, not just their sheer number.</p>
+        </div>
+        <div class="feature-image">
+            <img src="screenshot_teki_home.jpeg" alt="Teki Dashboard" class="app-screenshot">
+        </div>
+    </section>
+
+    <section class="feature-row">
+        <div class="feature-content">
+            <h2>Edit whenever</h2>
+            <p>Had an 'ADHD moment'? Edit the error in your task/reward title retroactively, or just check the last completion/claim time. Our app is built with real people in mind.</p>
+        </div>
+        <div class="feature-image">
+            <img src="screenshot_teki_edits_combined.png" alt="Teki Editing" class="app-screenshot">
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>FAQ</h2>
+        <details>
+            <summary>Can I exchange my coins for real money?</summary>
+            <div class="faq-content">No. Teki is a self-motivation tool, and the coins within it hold no real-world value. They're just intended to help you track and incentivize productivity by working towards rewards you've set for yourself.</div>
+        </details>
+        <details>
+            <summary>Is Teki free to use?</summary>
+            <div class="faq-content">Yes! Teki is completely free to use. You may just see some ads from time to time.</div>
+        </details>
+        <details>
+            <summary>Can I sync my data across devices?</summary>
+            <div class="faq-content">Currently, Teki stores data locally on your Android device to ensure maximum privacy and speed. This means there is no way for you to log in nor sync data.</div>
+        </details>
+        <details>
+            <summary>What are 'One-time' tasks?</summary>
+            <div class="faq-content">One-time tasks are tasks that you intend to do just once. These could be larger long-term goals ("Finish thesis"), or one-off to-do's ("Schedule a doctor's appointment"). These tasks are removed from your task list once completed.</div>
+        </details>
+        <details>
+            <summary>What are 'Endless' tasks?</summary>
+            <div class="faq-content">Endless tasks are habits you intend to do repeatedly ("Drink a glass of water"). These tasks remain on your task list even after being completed.</div>
+        </details>
+        <details>
+            <summary>Is there an iOS version?</summary>
+            <div class="faq-content">Not yet. We're currently focused on making the Android experience the best it can be, but stay tuned for future updates!</div>
+        </details>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="tekiapp_privacy.html">Privacy Policy</a>
+                <a href="tekiapp_terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <a href="mailto:support@teki.app">support@teki.app</a>
+                <p>Teki,<br>Tallinn, Estonia</p>
+            </div>
+            <a href="YOUR_PLAY_STORE_LINK_HERE" class="play-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
